@@ -26,7 +26,6 @@
 
 			GROUP BY status.id 
 		");
-
 		while($row = $statusQuery->fetch_object()){
 			$statuses[] = $row;
 		}
@@ -51,5 +50,11 @@
 	<script src="js/dialog.js"></script>
 </head>
 <div id="statusarea">
-  <?php echo $statuslist; ?>
+  <?php 
+	foreach($statuses as $status) {
+		// here you can access all the status properties using -> syntax
+		// you can echo each status inside the loop
+		echo $status->likes;
+	}
+  ?>
 </div>
