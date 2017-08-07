@@ -26,7 +26,6 @@
 
 			GROUP BY status.id 
 		");
-              	$statuses = [];
 		while($row = $statusQuery->fetch_object()){
 			$statuses[] = $row;
 		}
