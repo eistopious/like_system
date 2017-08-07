@@ -51,5 +51,11 @@
 	<script src="js/dialog.js"></script>
 </head>
 <div id="statusarea">
-  <?php echo $statuslist; ?>
+  <?php 
+    foreach ($statuses as $status) {
+	 // Yoou can echo your html here for each status object
+	 echo $status->likes;    
+    }
+	
+   ?>
 </div>
